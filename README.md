@@ -1,1 +1,2 @@
-# Sustainable_Productmarketplace
+The Sustainable Product Marketplace is a web-based e-commerce platform designed to promote environmentally friendly shopping by connecting customers with sellers who offer eco-friendly, recyclable, biodegradable, handmade, and sustainable products.
+The platform enables customers to discover and purchase sustainable products while helping small businesses and eco-conscious sellers reach a wider audience. It also provides an administrative dashboard to manage users, sellers, products, and marketplace activities.
