@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="eBs7hHy3LxOsKYnUnTRY">
+    <mxGraphModel dx="1373" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Customer" vertex="1">
+          <mxGeometry height="50" width="120" x="130" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Seller" vertex="1">
+          <mxGeometry height="50" width="120" x="330" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="Admin" vertex="1">
+          <mxGeometry height="50" width="120" x="530" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-4" parent="1" style="swimlane;horizontal=0;rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" value="CLIENT LAYER" vertex="1">
+          <mxGeometry height="130" width="620" x="80" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-5" parent="4WO_L5485YGwxjeU_Dvu-4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="React.js Frontend&#xa;&#xa;Customer Interface&#xa;Seller Dashboard&#xa;Admin Dashboard" vertex="1">
+          <mxGeometry height="65" width="480" x="170" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-6" parent="1" style="swimlane;horizontal=0;rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="BACKEND / API LAYER" vertex="1">
+          <mxGeometry height="230" width="620" x="80" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-7" parent="4WO_L5485YGwxjeU_Dvu-6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Java Spring Boot&#xa;&#xa;REST APIs&#xa;Authentication &amp; Authorization&#xa;User Management&#xa;Seller Management&#xa;Product Management&#xa;Category Management&#xa;Cart &amp; Order Management&#xa;Review Management" vertex="1">
+          <mxGeometry height="160" width="560" x="130" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-8" parent="1" style="swimlane;horizontal=0;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="DATABASE LAYER" vertex="1">
+          <mxGeometry height="150" width="620" x="80" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-9" parent="4WO_L5485YGwxjeU_Dvu-8" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="MySQL Database&#xa;&#xa;Users | Sellers | Categories | Products&#xa;Cart | Cart Items | Orders | Order Items&#xa;Reviews | Wishlist | Payments" vertex="1">
+          <mxGeometry height="75" width="560" x="130" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-10" parent="1" style="swimlane;horizontal=0;rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" value="EXTERNAL SERVICES" vertex="1">
+          <mxGeometry height="230" width="300" x="760" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-11" parent="4WO_L5485YGwxjeU_Dvu-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Payment Gateway" vertex="1">
+          <mxGeometry height="50" width="160" x="70" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-12" parent="4WO_L5485YGwxjeU_Dvu-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Email Service" vertex="1">
+          <mxGeometry height="50" width="160" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-13" edge="1" parent="1" source="4WO_L5485YGwxjeU_Dvu-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="4WO_L5485YGwxjeU_Dvu-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-14" edge="1" parent="1" source="4WO_L5485YGwxjeU_Dvu-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="4WO_L5485YGwxjeU_Dvu-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-15" edge="1" parent="1" source="4WO_L5485YGwxjeU_Dvu-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="4WO_L5485YGwxjeU_Dvu-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-16" edge="1" parent="1" source="4WO_L5485YGwxjeU_Dvu-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontStyle=1;" target="4WO_L5485YGwxjeU_Dvu-7" value="REST API / HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-17" edge="1" parent="1" source="4WO_L5485YGwxjeU_Dvu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontStyle=1;" target="4WO_L5485YGwxjeU_Dvu-9" value="JPA / Hibernate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-18" edge="1" parent="1" source="4WO_L5485YGwxjeU_Dvu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="4WO_L5485YGwxjeU_Dvu-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4WO_L5485YGwxjeU_Dvu-19" edge="1" parent="1" source="4WO_L5485YGwxjeU_Dvu-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="4WO_L5485YGwxjeU_Dvu-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
