@@ -1,0 +1,98 @@
+// Sustainable Product Marketplace - ER Diagram Source
+// Paste this into https://dbdiagram.io to generate and export the diagram (PNG + .dbml)
+
+Table users {
+  user_id int [pk, increment]
+  full_name varchar
+  email varchar [unique]
+  password varchar
+  phone varchar
+  role varchar [note: 'customer / seller / admin']
+  created_at datetime
+}
+
+Table sellers {
+  seller_id int [pk, increment]
+  user_id int [ref: - users.user_id, note: 'FK, one-to-one: a user becomes at most one seller']
+  business_name varchar
+  business_email varchar
+  phone varchar
+  address varchar
+  approval_status varchar [note: 'pending / approved / rejected']
+}
+
+Table categories {
+  category_id int [pk, increment]
+  category_name varchar
+  description varchar
+}
+
+Table products {
+  product_id int [pk, increment]
+  seller_id int [ref: > sellers.seller_id, note: 'FK']
+  category_id int [ref: > categories.category_id, note: 'FK']
+  product_name varchar
+  description varchar
+  price decimal
+  stock_quantity int
+  sustainability_score decimal
+  image_url varchar
+  created_at datetime
+}
+
+Table cart {
+  cart_id int [pk, increment]
+  user_id int [ref: - users.user_id, note: 'FK, one-to-one: each user has exactly one cart']
+}
+
+Table cart_items {
+  cart_item_id int [pk, increment]
+  cart_id int [ref: > cart.cart_id, note: 'FK']
+  product_id int [ref: > products.product_id, note: 'FK']
+  quantity int
+  note: 'Junction table resolving the many-to-many between cart and products'
+}
+
+Table orders {
+  order_id int [pk, increment]
+  user_id int [ref: > users.user_id, note: 'FK']
+  order_date datetime
+  total_amount decimal
+  payment_status varchar
+  order_status varchar
+}
+
+Table order_items {
+  order_item_id int [pk, increment]
+  order_id int [ref: > orders.order_id, note: 'FK']
+  product_id int [ref: > products.product_id, note: 'FK']
+  quantity int
+  price decimal [note: 'price captured at time of purchase']
+  note: 'Junction table resolving the many-to-many between orders and products'
+}
+
+Table reviews {
+  review_id int [pk, increment]
+  user_id int [ref: > users.user_id, note: 'FK']
+  product_id int [ref: > products.product_id, note: 'FK']
+  rating int
+  comment varchar
+  review_date datetime
+}
+
+Table wishlist {
+  wishlist_id int [pk, increment]
+  user_id int [ref: > users.user_id, note: 'FK']
+  product_id int [ref: > products.product_id, note: 'FK']
+  note: 'Junction table resolving the many-to-many between users and products (wishlist)'
+}
+
+Table payments {
+  payment_id int [pk, increment]
+  order_id int [ref: - orders.order_id, note: 'FK, one-to-one: each order has exactly one payment']
+  payment_method varchar
+  amount decimal
+  payment_status varchar
+  transaction_id varchar
+  payment_date datetime
+}
